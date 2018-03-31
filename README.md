@@ -25,7 +25,7 @@ label,html,body,area,b,br
 HTML5赋予网页更好的意义和结构。更加丰富的标签。
 <article><aside><audio> <bdi> <canvas><command> <datalist> <details> <embed><figcaption> <figure><footer>
 <header><hgroup> <keygen> <mark> <meter> <nav><output> <progress> <rp><rt><ruby><section><source><summary> <time><track><video> 
-#### 本地存储特性（Class: OFFLINE & STORAGE）
+#### 本地存储特性（Class: OFFLINE STORAGE）
 基于HTML5开发的网页APP拥有更短的启动时间，更快的联网速度，这些全得益于HTML5 APP Cache，以及本地存储功能。Indexed DB（html5本地存储最重要的技术之一）。
 localStorage - 没有时间限制的数据存储
 sessionStorage - 针对一个 session 的数据存储
