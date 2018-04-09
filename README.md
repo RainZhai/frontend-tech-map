@@ -203,15 +203,16 @@ a：active 点击时展示链接效果
 * DIV 和SPAN
 我们使用div对页面进行分割，使用span包含某一两个文字或者一段话。事实上，div实现了页面的布局，它来主持着页面的全局，而span对其中各个细微的地方进行修饰。
 * HTML族谱
-祖先：一个标签A包含了另一个标签B，那么A是B的祖先，html标签是所有标签的祖先。
-派生：在一个或是更多标签内部的标签就是一个派生标签，图中body是html派生标签。
-父标签：一个父标签是另一个标签最近的祖先，html是head和body标签的父标签。
-子标签：一个直接被另一个标签包围的标签就是子标签,h1和p是body的子标签。
-同胞标签：head和body，还有h1和p。
+    * 祖先：一个标签A包含了另一个标签B，那么A是B的祖先，html标签是所有标签的祖先。
+    * 派生：在一个或是更多标签内部的标签就是一个派生标签，图中body是html派生标签。
+    * 父标签：一个父标签是另一个标签最近的祖先，html是head和body标签的父标签。
+    * 子标签：一个直接被另一个标签包围的标签就是子标签,h1和p是body的子标签。
+    * 同胞标签：head和body，还有h1和p。
+
 * Margin、Padding and Border
-Padding 指的是内容和内容边距之间的空间
-Border指的是在方框每一边上的直线
-Margin指的是一个标签和另一个标签间的间隔
+    * Padding 指的是内容和内容边距之间的空间
+    * Border指的是在方框每一边上的直线
+    * Margin指的是一个标签和另一个标签间的间隔
 
 ## 相关概念:
 * css渲染，重绘repaint，重排reflow，组合
@@ -255,6 +256,9 @@ BFC 即 Block Formatting Contexts (块级格式化上下文)，它属于上述�
 * ES3
 * ES5
 * ES6
+
+### javascript
+
 
 ### javsscript 框架
 
