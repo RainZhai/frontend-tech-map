@@ -95,36 +95,36 @@ WebSocket 是伴随HTML5发布的一种新协议。它实现了浏览器与服�
 * Canvas
 * WebGL
 * CSS3的3D
-SVG动画制作: http://snapsvg.io
-SVG数据可视化框架: https://d3js.org
-Canvas引擎：egret , cocos2D-js , lufylegend.js ,echarts等
-WebGL 框架: threejs , Babylon.js等
-CSS3 3D: http://rainzhai.github.io/raincss/css3/cube.html
+* SVG动画制作: http://snapsvg.io
+* SVG数据可视化框架: https://d3js.org
+* Canvas引擎：egret , cocos2D-js , lufylegend.js ,echarts等
+* WebGL 框架: threejs , Babylon.js等
+* CSS3 3D: http://rainzhai.github.io/raincss/css3/cube.html
 
 #### 性能与集成特性（Class: Performance & Integration）
 * XMLHttpRequest2
 #### CSS3特性(Class: CSS3)
 在不牺牲性能和语义结构的前提下，CSS3中提供了更多的风格和更强的效果。此外，较之以前的Web排版，Web的开放字体格式（WOFF）也提供了更高的灵活性和控制性。
 * 边框
-border-radius
-box-shadow
-border-image
+    * border-radius
+    * box-shadow
+    * border-image
 
 * 背景(多重背景)
-background-size
-background-origin 背景定位
-background-clip 背景裁剪
+    * background-size
+    * background-origin 背景定位
+    * background-clip 背景裁剪
 
 * 文本效果
-text-align-last 设置如何对齐最后一行或紧挨着强制换行符之前的行
-text-emphasis 应用重点标记以及重点标记的前景色
-text-justify "justify" 时所使用的对齐方法
-text-outline 文本的轮廓
-text-overflow 文本溢出包含元素时发生的事情
-text-shadow
-text-wrap 文本的换行规则
-word-break 非中日韩文本的换行规则
-word-wrap 长的不可分割的单词进行分割并换行到下一行
+    * text-align-last 设置如何对齐最后一行或紧挨着强制换行符之前的行
+    * text-emphasis 应用重点标记以及重点标记的前景色
+    * text-justify "justify" 时所使用的对齐方法
+    * text-outline 文本的轮廓
+    * text-overflow 文本溢出包含元素时发生的事情
+    * text-shadow
+    * text-wrap 文本的换行规则
+    * word-break 非中日韩文本的换行规则
+    * word-wrap 长的不可分割的单词进行分割并换行到下一行
 
 * webfont
 @font-face{
@@ -134,57 +134,57 @@ url('Sansation_Light.eot'); /* IE9+ */
 }
 
 * 2D 转换
-transform
-translate(x,y) 移动
-rotate(x,y) 转动
-scale(x,y) 缩放
-skew(x,y) 倾斜
-matrix() 矩阵
+    * transform
+    * translate(x,y) 移动
+    * rotate(x,y) 转动
+    * scale(x,y) 缩放
+    * skew(x,y) 倾斜
+    * matrix() 矩阵
 
 * 3D转换
-rotate3d(x,y,z,angle)
-translate3d(x,y,z)
--scale3d(x,y,z)
+    * rotate3d(x,y,z,angle)
+    * translate3d(x,y,z)
+    * -scale3d(x,y,z)
 
 * 过渡
-transition
+    * transition
 
 * 动画
-@Keyframes
-animation
+    * @Keyframes
+    * animation
 
 * 多列
-column-count
-column-gap
-column-rule
+    * column-count
+    * column-gap
+    * column-rule
 
 * 界面
-resize
-box-sizing
-outline-offset
+    * resize
+    * box-sizing
+    * outline-offset
 
 * 颜色
-RGBA
-HSL
-HSLA
+    * RGBA
+    * HSL
+    * HSLA
 
 * flex布局
 Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型提供最大的灵活性。任何一个容器都可以指定为 Flex 布局。
 采用 Flex 布局的元素，称为 Flex 容器（flex container），简称"容器"。它的所有子元素自动成为容器成员，称为 Flex 项目（flex item），简称"项目"。
   * 容器的属性
-    flex-direction 决定主轴的方向
-    flex-wrap 如果一条轴线排不下，如何换行
-    flex-flow flex-direction属性和flex-wrap属性的简写形式
-    justify-content 项目在主轴上的对齐方式
-    align-items在交叉轴上如何对齐
-    align-content多根轴线的对齐方式
+    * flex-direction 决定主轴的方向
+    * flex-wrap 如果一条轴线排不下，如何换行
+    * flex-flow flex-direction属性和flex-wrap属性的简写形式
+    * justify-content 项目在主轴上的对齐方式
+    * align-items在交叉轴上如何对齐
+    * align-content多根轴线的对齐方式
   * 项目的属性
-    order排列顺序
-    flex-grow项目的放大比例
-    flex-shrink项目的缩小比例
-    flex-basis分配多余空间之前，项目占据的主轴空间
-    flex flex-grow, flex-shrink 和 flex-basis的简写
-    align-self 单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性
+    * order排列顺序
+    * flex-grow项目的放大比例
+    * flex-shrink项目的缩小比例
+    * flex-basis分配多余空间之前，项目占据的主轴空间
+    * flex flex-grow, flex-shrink 和 flex-basis的简写
+    * align-self 单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性
 
 * media query
 
@@ -196,10 +196,11 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 id选择器，我们从另一个方面思考，它和数据库表里面的主键是同一个作用，唯一标示，所以id是唯一的.
 对于class我们可以联想到java中的类，对于同样的功能，我们使用或继承同一个类就可以了，不需要编写新的类，css中的class也是如此，同样的样式用同一个class实现。
 * 伪类和伪元素
-a：link 未使用的链接（a）
-a：visted 已经点击过的链接
-a：hover 鼠标滑过时改变链接的效果
-a：active 点击时展示链接效果
+    * a：link 未使用的链接（a）
+    * ：visted 已经点击过的链接
+    * a：hover 鼠标滑过时改变链接的效果
+    * a：active 点击时展示链接效果
+
 * DIV 和SPAN
 我们使用div对页面进行分割，使用span包含某一两个文字或者一段话。事实上，div实现了页面的布局，它来主持着页面的全局，而span对其中各个细微的地方进行修饰。
 * HTML族谱
@@ -215,16 +216,16 @@ a：active 点击时展示链接效果
     * Margin指的是一个标签和另一个标签间的间隔
 
 ## 相关概念:
-* css渲染，重绘repaint，重排reflow，组合
-    下面情况会导致reflow发生
-        1：改变窗口大小
-        2：改变文字大小
-        3：内容的改变，如用户在输入框中敲字
-        4：激活伪类，如:hover
-        5：操作class属性
-        6：脚本操作DOM
-        7：计算offsetWidth和offsetHeight
-        8：设置style属性
+* css渲染，重绘repaint，重排reflow，组合.
+下面情况会导致reflow发生
+    * 1：改变窗口大小
+    * 2：改变文字大小
+    * 3：内容的改变，如用户在输入框中敲字
+    * 4：激活伪类，如:hover
+    * 5：操作class属性
+    * 6：脚本操作DOM
+    * 7：计算offsetWidth和offsetHeight
+    * 8：设置style属性
 * 盒模型
 * 块级元素
 * 行内元素
@@ -258,8 +259,90 @@ BFC 即 Block Formatting Contexts (块级格式化上下文)，它属于上述�
 * ES6
 
 ### javascript
+* 变量
+```javascript
+//弱类型
+var a = 1;
+b = 1;
+```
+* 数据类型
+    * 基本类型: undefined、null、boolean、number、string、objcet、function
+    * 栈：原始数据类型（Undefined，Null，Boolean，Number、String）es6的Symbol
+    * 堆：引用数据类型（对象Object、数组Array和函数Function）
 
+* 两种类型的区别是：存储位置不同；
+    * 原始数据类型直接存储在栈(stack)中的简单数据段，占据空间小、大小固定，属于被频繁使用数据，所以放入栈中存储；
+    * 引用数据类型存储在堆(heap)中的对象,占据空间大、大小不固定。如果存储在栈中，将会影响程序运行的性能；引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址。当解释器寻找引用值时，会首先检索其在栈中的地址，取得地址后从堆中获得实体
+* null，undefined 的区别
+    * null 表示一个对象是“没有值”的值，也就是值为“空”；
+    * undefined 表示一个变量声明了没有初始化(赋值)；
+    * undefined不是一个有效的JSON，而null是；
+    * undefined的类型(typeof)是undefined；
+    * null的类型(typeof)是object；
 
+```javascript
+null == undefined // true
+null === undefined // false
+```
+
+* 对象
+    * 广义：在内存上一段有意义的区域，称作为一个对象。
+    * 在显式支持面向对象的语言中，“对象”一般是指类在内存中装载的实例，具有相关的成员变量和成员函数
+    * 在 JavaScript 中，对象是拥有属性和方法的数据。
+```javascript
+//JavaScript 中的几乎所有事物都是对象：字符串、数字、数组、日期、函数，等等
+var person=new Object();
+person.firstname="Bill";
+person.hello = function(){}
+//创建对象三种方式
+// 1.字面量
+var a = {};
+// 2.构造函数
+function book(){}
+var a = new book();
+// 3.object
+var obj = new Object();
+```
+    * new操作符具体干了什么
+    * 1、创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型。
+    * 2、属性和方法被加入到 this 引用的对象中。
+    * 3、新创建的对象由 this 所引用，并且最后隐式的返回 this 。
+
+* 变量对象VO
+    * 先函数声明前置，然后在变量声明，JS解释器通过变量对象（Variable Object, VO)来获取。VO是一个抽象概念的“对象”，函数的VO分为两个阶段——变量初始化和代码执行。在变量初始化阶段，VO按照如下顺序填充：
+    * 1.函数参数(若未传入，初始化为undefined)
+    * 2.函数声明(发生命名冲突会覆盖)
+    * 3.变量声明(初始化为undefined, 发生命名冲突会忽略)
+```javascript
+function test(a, b){
+  var c = 10;
+  function d(){}
+  var e = function _e(){};
+  (function x(){});
+  b = 20;
+}
+test(10);
+//变量初始化阶段
+AO(test)={
+  a: 10,
+  b: undefined,
+  c: undefined,
+  d: <ref to func "d">
+  e: undefined
+}
+//代码执行阶段逐一赋值
+VO['c'] = 10;
+VO['e'] = function _e(){}
+VO['b'] = 20;
+//结果
+AO(test)={
+  a: 10,
+  b: 20,
+  c: 10,
+  d: <reference  to FunctionDeclaration "d">
+  e: function _e(){}
+}
+```
 ### javsscript 框架
 
 ## node.js
