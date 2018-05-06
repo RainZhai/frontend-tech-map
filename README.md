@@ -575,7 +575,58 @@ console.log(add(undefined,1))
 
 ### javsscript 框架
 ### React 
+理念：UI= render(data)
+用户看到的界面是一个函数的执行结果，只接受数据作为参数。这个函数是一个纯函数，所谓纯函数指完全没有副作用，输出完全依赖输入的函数。
+想要更新界面，要做的就是更新data，界面自然做出响应，react也是响应式编程的思想。
 
+#### virtual DOM
+对dom树的抽象。不会触及浏览器部分，只存在js空间的树结构，每次自上而下渲染react组件，会对比上次渲染的差异，然后修改真正的dom的差异部分。
+#### 优点
+避免复杂的程序结构，开发者效率大大提高，代码维护性和可阅读性大大增强。数据驱动视图
+
+#### 高质量的react组件
+prop是组件对外接口，state是组件内部状态。
+读取prop，super(props)，给this.props赋值是React.Component构造函数工作之一。
+propType检查
+React的state
+在构造函数中对state初始化
+```javascript
+constructor(props){
+    this.state={
+        count: props.initVal || 0
+    }
+}
+```
+不要直接修改state而使用setState
+##### 组件的生命周期
+* 装载 mount 
+* 更新 update 
+* 卸载 unmount
+
+装载过程
+constructor
+getInitialState//es6无createClass中存在
+getDefaultProps//es6无createClass中存在
+componentWillMount//操作可以放在constructor，只起到对称作用，在服务端可被调用
+render//只返回jsx对象，由react决定如何渲染
+componentDidMount//所有组件的render执行完成后才去执行didMount
+
+更新过程
+componentWillReceiveProps//父组件的render函数被调用，子组件会经历更新过程，不管传给子组件的props有木有改变，都会触发。setState不会触发
+shouldComponentUpdate//决定一个组件什么时候不需要渲染，返回一个布尔值告诉react更新过程是否继续
+ComponentWillUpdate
+render
+ComponentDidUpdate
+```javascript
+shoundComponentUpdate(nextProps, nextState){
+    return (nextProps.caption!==this.props.caption) || (nextState.count!==this.state.count)
+}
+```
+卸载过程
+ComponentWillUnmount
+
+局限性
+子组件counter的count状态之后不一致，逻辑相同的状态放在不同组件会导致困局。react的state来存储状态缺点，数据的冗余和重复。
 ## node.js
 
 ```javascript
