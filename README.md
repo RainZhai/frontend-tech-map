@@ -581,8 +581,3 @@ console.log(add(undefined,1))
 ```javascript
 
 ```
-Ø  8年互联网前端开发经验。喜欢学习新的技术并应用到实际工作。喜欢关注互联⽹新事物和产品。
-Ø  熟练掌握JQuery，React,微信小程序，了解VUE，Angular框架。
-Ø  深入理解JavaScript语言特性、熟悉其优势和弊端。 
-Ø  熟悉DIV+CSS页面架构和布局方式，著有Rain CSS框架。 
-Ø  能够使用Nodejs进行Web开发，有前后端分离实践经验，如接口模拟mockx等。
