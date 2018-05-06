@@ -253,12 +253,12 @@ BFC 即 Block Formatting Contexts (块级格式化上下文)，它属于上述�
 见html5 css3部分
 
 ## javascript
-* javascript
+* javascript基础
 * ES3
 * ES5
 * ES6
 
-### javascript
+### javascript基础
 
 #### 语法
 * 变量
@@ -500,10 +500,89 @@ b();
 * 全局函数无法查看局部函数的内部细节，但局部函数可以查看其上层的函数细节，直至全局细节。
 当需要从局部函数查找某一属性或方法时，如果当前作用域没有找到，就会上溯到上层作用域查找，
 直至全局函数，这种组织形式就是作用域链。
+
+#### ES6
+##### 1.块级作用域
+* let
+* const
+
+##### 2. 字符串和正则表达式
+utf-16码位
+codePointAt()方法
+String.fromCodePoint()
+normalize()方法  提供unicode标准化形式
+
+##### 模板字面量
+```javascript
+//简化多行字符串
+let m = `multi
+string`;
+console.log(m)
+//字符串占位符
+let name ='sss';
+meg = `hello, ${name}`;
+console.log(meg);
+```
+
+##### 3.函数
+* 形参默认值
+```javascript
+//es5模拟
+function a(url){
+    url = url || 'book/aa';
+}
+//es6默认参数值
+function a(url='bbb/ssss'){
+}
+//对arguments对象的影响
+//es6中使用了默认值arguments对象和es5严格模式保持一致，不可被重新赋值
+function mix(first,second='b'){
+    console.log(first===arguments[0])//true
+    console.log(second===arguments[1])//false
+    first='c'
+    second='d'
+    console.log(first===arguments[0])//false
+    console.log(second===arguments[1])//false
+}
+//默认参数表达式
+let v= 5；
+function getVal(){
+    return v++;
+}
+function add(first, second = getVal()){
+    return first + second;
+}
+console.log(add(1))
+console.log(add(1))
+//另一种情况
+let v= 5；
+function getVal(v){
+    return v+5;
+}
+function add(first, second = getVal(first)){
+    return first + second;
+}
+console.log(add(1))
+//默认参数临时死区
+function add(first=second, second){
+    return first + second;
+}
+console.log(add(1,1))
+console.log(add(undefined,1))
+```
+
+
+
 ### javsscript 框架
+### React 
 
 ## node.js
 
 ```javascript
 
 ```
+Ø  8年互联网前端开发经验。喜欢学习新的技术并应用到实际工作。喜欢关注互联⽹新事物和产品。
+Ø  熟练掌握JQuery，React,微信小程序，了解VUE，Angular框架。
+Ø  深入理解JavaScript语言特性、熟悉其优势和弊端。 
+Ø  熟悉DIV+CSS页面架构和布局方式，著有Rain CSS框架。 
+Ø  能够使用Nodejs进行Web开发，有前后端分离实践经验，如接口模拟mockx等。
