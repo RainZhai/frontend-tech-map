@@ -571,8 +571,6 @@ console.log(add(1,1))
 console.log(add(undefined,1))
 ```
 
-
-
 ### javsscript 框架
 ### React 
 理念：UI= render(data)
@@ -590,6 +588,7 @@ prop是组件对外接口，state是组件内部状态。
 propType检查
 React的state
 在构造函数中对state初始化
+
 ```javascript
 constructor(props){
     this.state={
@@ -597,10 +596,13 @@ constructor(props){
     }
 }
 ```
+
 不要直接修改state而使用setState
+
 ##### 组件的生命周期
-* 装载 mount 
-* 更新 update 
+
+* 装载 mount
+* 更新 update
 * 卸载 unmount
 
 装载过程
@@ -617,16 +619,38 @@ shouldComponentUpdate//决定一个组件什么时候不需要渲染，返回一
 ComponentWillUpdate
 render
 ComponentDidUpdate
+
 ```javascript
 shoundComponentUpdate(nextProps, nextState){
     return (nextProps.caption!==this.props.caption) || (nextState.count!==this.state.count)
 }
 ```
+
 卸载过程
 ComponentWillUnmount
 
 局限性
 子组件counter的count状态之后不一致，逻辑相同的状态放在不同组件会导致困局。react的state来存储状态缺点，数据的冗余和重复。
+
+## redux
+
+## redux基本原则
+
+唯一数据源（也可以多个store但是无好处，store依赖关系，更新顺序带来新的问题）
+保持状态只读（不能直接修改一个状态，而是需要通过action派发来完成）
+数据改变只能通过纯函数完成（reducer函数完成规约所有元素的功能 reducer（state，action）得到新的state，reducer只计算不存储state）
+
+-容器组件 和redux store打交道，读取store状态，状态变化更新组件状态，重新渲染组件，需要更新store状态，派发action（store状态转为傻瓜组件的prop mapStateToProps，傻瓜组件的动作转为派送给store的动作 mapDispatchToProps）
+-傻瓜组件：根据当前props和state，渲染用户界面
+
+## 组件context
+
+一个树状组件上所有组件都能访问一个共同的对象，需要上级组件和下级组件配合。
+Provider也是一个react组件，但他的render函数只是简单的把子组件渲染出来，不做任何附加的事情
+react-redux库提供了
+connect ： 连接容器组件和傻瓜组件
+provider ： 提供了包含store的context
+
 ## node.js
 
 ```javascript
