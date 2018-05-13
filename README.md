@@ -498,6 +498,7 @@ b();
 
 * Javascript作用链域
 * 全局函数无法查看局部函数的内部细节，但局部函数可以查看其上层的函数细节，直至全局细节。
+
 当需要从局部函数查找某一属性或方法时，如果当前作用域没有找到，就会上溯到上层作用域查找，
 直至全局函数，这种组织形式就是作用域链。
 
@@ -525,7 +526,9 @@ console.log(meg);
 ```
 
 ##### 3.函数
+
 * 形参默认值
+
 ```javascript
 //es5模拟
 function a(url){
@@ -571,18 +574,33 @@ console.log(add(1,1))
 console.log(add(undefined,1))
 ```
 
+### promise
+
+异步操作结果的占位符，让函数返回一个promise对象
+生命周期
+进行中pending，操作未完成它是unsettled的，操作结束promise则是已处理settled，
+操作结束时，promise会进行到两个状态中的一个：
+fulfilled 异步操作成功完成
+rejected 由于程序错误，未能成功完成
+
 ### javsscript 框架
+
 ### React 
+
 理念：UI= render(data)
 用户看到的界面是一个函数的执行结果，只接受数据作为参数。这个函数是一个纯函数，所谓纯函数指完全没有副作用，输出完全依赖输入的函数。
 想要更新界面，要做的就是更新data，界面自然做出响应，react也是响应式编程的思想。
 
 #### virtual DOM
+
 对dom树的抽象。不会触及浏览器部分，只存在js空间的树结构，每次自上而下渲染react组件，会对比上次渲染的差异，然后修改真正的dom的差异部分。
+
 #### 优点
+
 避免复杂的程序结构，开发者效率大大提高，代码维护性和可阅读性大大增强。数据驱动视图
 
 #### 高质量的react组件
+
 prop是组件对外接口，state是组件内部状态。
 读取prop，super(props)，给this.props赋值是React.Component构造函数工作之一。
 propType检查
