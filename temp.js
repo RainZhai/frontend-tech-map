@@ -91,8 +91,8 @@ function getCombSubChar(str) {
     var arr = str.split('');
     var len = arr.length;
     var resultArr = [];
-    for (var i = len; i >=0; i--) {
-        combination(i, arr, resultArr);
+    for (var i = 0; i<len; i++) {
+            combination2(arr[i], arr.slice(i+1, arr.length), resultArr)
     }
     console.log(resultArr)
 }
@@ -114,4 +114,12 @@ function combination(m, arr, resultArr) {
     }
 }
 
+function combination2(start, arr, resultArr) {
+    if (arr.length != 0) {
+        resultArr.push(start + arr[0]);
+        combination2(start, arr.slice(1, arr.length), resultArr)
+    } else {
+        resultArr.push(start);
+    }
+}
 getCombSubChar('sd')
