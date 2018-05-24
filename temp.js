@@ -124,3 +124,23 @@ combination2(start+arr[0], arr.slice(1, arr.length), resultArr)
     }
 }
 getCombSubChar('sd')
+
+//获取最大最小数，最优算法
+function getMinMax(arr){
+  var len = arr.length
+  var min = 0
+  var max = 0
+  for(var i = 0;i<len;i=i+2){
+    if(min=0) min = arr[i]
+    if(max=0) max = arr[i+1]
+    if(arr[i]<min) min= arr[i]
+    if(arr[i+1]>max) max = arr[i+1]
+    if(min>max){
+      var temp = min
+      min = max
+      max= temp
+    }
+
+  }
+
+}
