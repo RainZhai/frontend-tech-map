@@ -118,8 +118,9 @@ function combination2(start, arr, resultArr) {
     if (arr.length != 0) {
         resultArr.push(start + arr[0]);
         combination2(start, arr.slice(1, arr.length), resultArr)
+combination2(start+arr[0], arr.slice(1, arr.length), resultArr)
     } else {
-        resultArr.push(start);
+        if(start.length==1) resultArr.push(start);
     }
 }
 getCombSubChar('sd')
