@@ -144,3 +144,24 @@ function getMinMax(arr){
   }
 
 }
+
+//修改状态，选中二位数组可选项目，并求出最终唯一id
+function getSelectItemAndId() {
+    var curr = {
+        state: 1,
+        ids: [1, 2, 3]
+    }
+    var mainArr = [[{
+        state: 2,
+        ids: [1, 2, 3]
+    }, {
+        state: 1,
+        ids: [1, 23]
+    }], [{
+        state: 1,
+        ids: [1, 4, 5]
+    }, {
+        state: 1,
+        ids: [4, 55, 77]
+    }]]
+}
