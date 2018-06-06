@@ -279,7 +279,9 @@ v = []//包装对象Array
 v = /../ //包装对象RegExp
 v = function(){} //包装对象Function
 ```
+
 * 函数声明
+
 ```javascript
 //具名函数
 function a(){}
@@ -290,11 +292,15 @@ var a =  function(){}
 //Function构造函数 
 var sum = new Function("num1","num2","return num1+num2")
 ```
+
 * 运算符
+
 ```javascript
 //+,-,*,/
 ```
+
 * 连续赋值运算
+
 ```javascript
 //连续赋值从右至左
 //a.x不能被赋值
@@ -340,6 +346,7 @@ alert(a[0]);// --> 4
 ```
 
 * 比较
+
 ```javascript
 //==  判断值
 //==＝  判断值和类型
@@ -351,6 +358,7 @@ alert(a[0]);// --> 4
 ```
 
 * 条件判断
+
 ```javascript
 if(a){
 }else{
@@ -367,6 +375,7 @@ switch (day){
 ```
 
 * 循环
+
 ```javascript
 //for - 循环代码块一定的次数
 //for/in - 循环遍历对象及原型的属性
@@ -377,19 +386,20 @@ switch (day){
 ```
 
 #### 数据类型
-    * 基本类型: undefined、null、boolean、number、string、objcet、function
-    * 栈：原始数据类型（Undefined，Null，Boolean，Number、String）es6的Symbol
-    * 堆：引用数据类型（对象Object、数组Array和函数Function）
+
+* 基本类型: undefined、null、boolean、number、string、objcet、function
+* 栈：原始数据类型（Undefined，Null，Boolean，Number、String）es6的Symbol
+* 堆：引用数据类型（对象Object、数组Array和函数Function）
 
 * 两种类型的区别是：存储位置不同；
-    * 原始数据类型直接存储在栈(stack)中的简单数据段，占据空间小、大小固定，属于被频繁使用数据，所以放入栈中存储；
-    * 引用数据类型存储在堆(heap)中的对象,占据空间大、大小不固定。如果存储在栈中，将会影响程序运行的性能；引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址。当解释器寻找引用值时，会首先检索其在栈中的地址，取得地址后从堆中获得实体
+* 原始数据类型直接存储在栈(stack)中的简单数据段，占据空间小、大小固定，属于被频繁使用数据，所以放入栈中存储；
+* 引用数据类型存储在堆(heap)中的对象,占据空间大、大小不固定。如果存储在栈中，将会影响程序运行的性能；引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址。当解释器寻找引用值时，会首先检索其在栈中的地址，取得地址后从堆中获得实体
 * null，undefined 的区别
-    * null 表示一个对象是“没有值”的值，也就是值为“空”；
-    * undefined 表示一个变量声明了没有初始化(赋值)；
-    * undefined不是一个有效的JSON，而null是；
-    * undefined的类型(typeof)是undefined；
-    * null的类型(typeof)是object；
+* null 表示一个对象是“没有值”的值，也就是值为“空”；
+* undefined 表示一个变量声明了没有初始化(赋值)；
+* undefined不是一个有效的JSON，而null是；
+* undefined的类型(typeof)是undefined；
+* null的类型(typeof)是object；
 
 ```javascript
 null == undefined // true
@@ -397,9 +407,11 @@ null === undefined // false
 ```
 
 #### 对象
+
     * 广义：在内存上一段有意义的区域，称作为一个对象。
     * 在显式支持面向对象的语言中，“对象”一般是指类在内存中装载的实例，具有相关的成员变量和成员函数
     * 在 JavaScript 中，对象是拥有属性和方法的数据。
+
 ```javascript
 //JavaScript 中的几乎所有事物都是对象：字符串、数字、数组、日期、函数，等等
 var person=new Object();
@@ -414,16 +426,18 @@ var a = new book();
 // 3.object
 var obj = new Object();
 ```
+
     * new操作符具体干了什么
     * 1、创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型。
     * 2、属性和方法被加入到 this 引用的对象中。
     * 3、新创建的对象由 this 所引用，并且最后隐式的返回 this 。
 
 * 变量对象VO
-    * 先函数声明前置，然后在变量声明，JS解释器通过变量对象（Variable Object, VO)来获取。VO是一个抽象概念的“对象”，函数的VO分为两个阶段——变量初始化和代码执行。在变量初始化阶段，VO按照如下顺序填充：
-    * 1.函数参数(若未传入，初始化为undefined)
-    * 2.函数声明(发生命名冲突会覆盖)
-    * 3.变量声明(初始化为undefined, 发生命名冲突会忽略)
+* 先函数声明前置，然后在变量声明，JS解释器通过变量对象（Variable Object, VO)来获取。VO是一个抽象概念的“对象”，函数的VO分为两个阶段——变量初始化和代码执行。在变量初始化阶段，VO按照如下顺序填充：
+* 1.函数参数(若未传入，初始化为undefined)
+* 2.函数声明(发生命名冲突会覆盖)
+* 3.变量声明(初始化为undefined, 发生命名冲突会忽略)
+
 ```javascript
 function test(a, b){
   var c = 10;
@@ -454,45 +468,51 @@ AO(test)={
   e: function _e(){}
 }
 ```
+
 #### JavaScript原型，原型链
-* 每个对象都会在其内部初始化一个属性，就是prototype(原型)，当我们访问一个对象的属性时，
-如果这个对象内部不存在这个属性，那么他就会去prototype里找这个属性，这个prototype又会有自己的prototype，
-于是就这样一直找下去，也就是我们平时所说的原型链的概念。
+
+* 每个对象都会在其内部初始化一个属性，就是prototype(原型)，当我们访问一个对象的属性时，如果这个对象内部不存在这个属性，那么他就会去prototype里找这个属性，这个prototype又会有自己的prototype，于是就这样一直找下去，也就是我们平时所说的原型链的概念。
+
 * 特点：
+
 * JavaScript对象是通过引用来传递的，我们创建的每个新对象实体中并没有一份属于自己的原型副本。当我们修改原型时，与之相关的对象也会继承这一改变。
 
 #### 函数
+
 * 闭包
-    * 在计算机科学中，闭包（Closure）是词法闭包（Lexical Closure）的简称，是引用了自由变量的函数。这个被引用的自由变量将和这个函数一同存在，即使已经离开了创造它的环境也不例外。所以，有另一种说法认为闭包是由函数和与其相关的引用环境组合而成的实体。
 
-    * 每次定义一个函数，都会产生一个作用域链（scope chain）。当JavaScript寻找变量varible时（这个过程称为变量解析），总会优先在当前作用域链的第一个对象中查找属性varible ，如果找到，则直接使用这个属性；否则，继续查找下一个对象的是否存在这个属性；这个过程会持续直至找到这个属性或者最终未找到引发错误为止。
+* 在计算机科学中，闭包（Closure）是词法闭包（Lexical Closure）的简称，是引用了自由变量的函数。这个被引用的自由变量将和这个函数一同存在，即使已经离开了创造它的环境也不例外。所以，有另一种说法认为闭包是由函数和与其相关的引用环境组合而成的实体。
 
-    * 所以，JavaScript中的所谓的高大上的闭包其实很简单，根本上还是变量解析。而之所以可以实现，还是因为变量解析会在作用域链中依次寻找对应属性的导致的。
+* 每次定义一个函数，都会产生一个作用域链（scope chain）。当JavaScript寻找变量varible时（这个过程称为变量解析），总会优先在当前作用域链的第一个对象中查找属性varible ，如果找到，则直接使用这个属性；否则，继续查找下一个对象的是否存在这个属性；这个过程会持续直至找到这个属性或者最终未找到引发错误为止。
 
-    * 就是一种允许函数向关联的父级作用域寻址的访问特权。
+* 所以，JavaScript中的所谓的高大上的闭包其实很简单，根本上还是变量解析。而之所以可以实现，还是因为变量解析会在作用域链中依次寻找对应属性的导致的。
+
+* 就是一种允许函数向关联的父级作用域寻址的访问特权。
 
 * callee 与caller
 * callee返回正在执行的函数本身的引用，它是arguments的一个属性
 * 1 这个属性只有在函数执行时才有效
 * 2 它有一个length属性，可以用来获得形参的个数，因此可以用来比较形参和实参个数是否一致，即比较arguments.length是否等于arguments.callee.length
 * 3 它可以用来递归匿名函数。
+
 ```javascript
-var a = function() {   
-alert(arguments.callee); 
-} 
+var a = function() {
+alert(arguments.callee);
+}
 ```
+
 * caller返回一个函数的引用，这个函数调用了当前的函数。
 * 使用这个属性要注意:
 * 1 这个属性只有当函数在执行时才有用
 * 2 如果在JavaScript程序中，函数是由顶层调用的，则返回null
 
 ```javascript
-var a = function() {   
-alert(a.caller);   
-}   
-var b = function() {   
-a();   
-}   
+var a = function() {
+alert(a.caller);
+}
+var b = function() {
+a();
+}
 b();  
 ```
 
@@ -503,17 +523,21 @@ b();
 直至全局函数，这种组织形式就是作用域链。
 
 #### ES6
+
 ##### 1.块级作用域
+
 * let
 * const
 
 ##### 2. 字符串和正则表达式
+
 utf-16码位
 codePointAt()方法
 String.fromCodePoint()
 normalize()方法  提供unicode标准化形式
 
 ##### 模板字面量
+
 ```javascript
 //简化多行字符串
 let m = `multi
@@ -585,7 +609,7 @@ rejected 由于程序错误，未能成功完成
 
 ### javsscript 框架
 
-### React 
+### React
 
 理念：UI= render(data)
 用户看到的界面是一个函数的执行结果，只接受数据作为参数。这个函数是一个纯函数，所谓纯函数指完全没有副作用，输出完全依赖输入的函数。
@@ -624,19 +648,19 @@ constructor(props){
 * 卸载 unmount
 
 装载过程
-constructor
-getInitialState//es6无createClass中存在
-getDefaultProps//es6无createClass中存在
-componentWillMount//操作可以放在constructor，只起到对称作用，在服务端可被调用
-render//只返回jsx对象，由react决定如何渲染
-componentDidMount//所有组件的render执行完成后才去执行didMount
+1.constructor
+2.getInitialState//es6无createClass中存在
+3.getDefaultProps//es6无createClass中存在
+4.componentWillMount//操作可以放在constructor，只起到对称作用，在服务端可被调用
+5.render//只返回jsx对象，由react决定如何渲染
+6.componentDidMount//所有组件的render执行完成后才去执行didMount
 
 更新过程
-componentWillReceiveProps//父组件的render函数被调用，子组件会经历更新过程，不管传给子组件的props有木有改变，都会触发。setState不会触发
-shouldComponentUpdate//决定一个组件什么时候不需要渲染，返回一个布尔值告诉react更新过程是否继续
-ComponentWillUpdate
-render
-ComponentDidUpdate
+1.componentWillReceiveProps//父组件的render函数被调用，子组件会经历更新过程，不管传给子组件的props有木有改变，都会触发。setState不会触发
+2.shouldComponentUpdate//决定一个组件什么时候不需要渲染，返回一个布尔值告诉react更新过程是否继续
+3.ComponentWillUpdate
+4.render
+5.ComponentDidUpdate
 
 ```javascript
 shoundComponentUpdate(nextProps, nextState){
@@ -645,9 +669,10 @@ shoundComponentUpdate(nextProps, nextState){
 ```
 
 卸载过程
-ComponentWillUnmount
+1.ComponentWillUnmount
 
 局限性
+
 子组件counter的count状态之后不一致，逻辑相同的状态放在不同组件会导致困局。react的state来存储状态缺点，数据的冗余和重复。
 
 ## redux
@@ -663,11 +688,37 @@ ComponentWillUnmount
 
 ## 组件context
 
+context提供了全局可访问对象，来传递store
 一个树状组件上所有组件都能访问一个共同的对象，需要上级组件和下级组件配合。
 Provider也是一个react组件，但他的render函数只是简单的把子组件渲染出来，不做任何附加的事情
 react-redux库提供了
 connect ： 连接容器组件和傻瓜组件
+容器组件：1.把store上的状态转为内层傻瓜组件的prop，mapStateToProps 2.把内层傻瓜组件的用户动作转为派送给store的动作,mapDispatchToProps.
 provider ： 提供了包含store的context
+
+## react组件性能优化
+
+1.单个组件的性能优化
+定制shoundComponentUpdate函数
+
+```javascript
+shoundComponentUpdate(nextProps, nextState){
+    return (nextProps.caption!==this.props.caption) || (nextState.count!==this.state.count)
+}
+```
+
+react-redux中：1.父组件传递给子组件的事件只指向同一个函数对象，以应对shoundComponentUpdate检查
+2.父组件不给子组件传递函数类型的prop，由子组件自己搞定
+
+`
+<todoItem key={item.id} id={item.id} text="{item.text}" conpleted={item.completed}/>
+const mapDispatchToProps = (dispatch, ownProps)=>{
+    const {id} = ownProps;
+    return {
+        onToggle: ()=>dispatch(toggleTodo(id))
+    }
+}
+`
 
 ## node.js
 
