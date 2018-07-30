@@ -145,7 +145,7 @@ function getMinMax(arr){
 
 }
 
-//修改状态，选中二位数组可选项目，并求出最终唯一id
+//遍历数组，判断交集来更新每项的状态，1表示有交集，2表示已选中，0表示无交集，并求出最终唯一id
 function getSelectItemAndId() {
     var curr = {
         state: 1,
@@ -164,4 +164,44 @@ function getSelectItemAndId() {
         state: 1,
         ids: [4, 55, 77]
     }]]
+
+    for(var i = 0; i<mainArr.length; i++){
+        mainArr[i].forEach(function(item,i){
+            if(intersection(curr.ids, item.ids).length>0){
+                if(mainArr[i].some(function(item2){ return item2.state == 2;})){
+                    item.state == 1
+                }else{
+                    item.state == 2
+                }
+            }else{
+                item.state = 0;
+            }
+        });
+    }
+    console.log(mainArr)
 }
+
+function intersection(firstArray, secondArray) {
+    // The logic here is to create a hashmap with the elements of the firstArray as the keys.
+    // After that, you can use the hashmap's O(1) look up time to check if the element exists in the hash
+    // If it does exist, add that element to the new array.
+  
+    var hashmap = {};
+    var intersectionArray = [];
+  
+    firstArray.forEach(function(element) {
+      hashmap[element] = 1;
+    });
+  
+    // Since we only want to push unique elements in our case... we can implement a counter to keep track of what we already added
+    secondArray.forEach(function(element) {
+      if (hashmap[element] === 1) {
+        intersectionArray.push(element);
+        hashmap[element]++;
+      }
+    });
+  
+    return intersectionArray;
+  
+    // Time complexity O(n), Space complexity O(n)
+  }
